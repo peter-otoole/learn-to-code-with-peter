@@ -76,8 +76,8 @@ Windows Terminal is a new, convient, and powerful tool giving you access to syst
   - If the download button doesn't appear, [use this direct link](https://github.com/cli/cli/releases/download/v1.7.0/gh_1.7.0_windows_amd64.msi)
 - Install the CLI by running the executable
 - Go to [https://github.com/](https://github.com/) and create an account if you don't have one already
-- Close and reopen the terminal
-- Navigate back to the repository folder using `cd workspace/repositories`
+- Close and reopen Windows Terminal
+- Navigate back to the repository folder using the command `cd workspace/repositories`
 - Execute `gh auth login` to login
 - Follow the on-screen prompts
 
@@ -95,7 +95,65 @@ Windows Terminal is a new, convient, and powerful tool giving you access to syst
 
 ### 6. Install NodeJs
 
-https://nodejs.org/en/download/
+- Go to the NodeJs website [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+- Download the LTS version for your OS type
+- Run the downloaded installer choosing default options
+- Close and reopen Windows Terminal
+- Navigate back to the repository folder using the command `cd workspace/repositories`
+
+### 7. Introduction to NodeJs REPL
+
+>REPL also known as Read Evaluate Print Loop is a programming language environment(Basically a console window) that takes single expression as user input and returns the result back to the console after execution.
+~[NodeJS docs](https://nodejs.dev/learn/how-to-use-the-nodejs-repl)
+
+We will use the REPL to execute some basic commands and operations. As mentioned above, each line entered will be _"run"_ almost as if it were an individual program. The output of each line entered will be printed to the console. Test this out by entering some numbers and words.
+
+```Javascript
+> "Hello World"
+> 1
+> 2
+> hello
+```
+
+_Note: We expect the last line to fail with an error stating "hello is not defined." We will come back to this later._
+
+### 8. Basic operators with numbers
+
+
+
+### 9. Logical evaluation
+
+### 10. Introduction to strings
+
+### 11. String operators
+
+### 12. Introduction to variables
+
+### 13. Data types
+
+### 14. Parsing strings to numbers
+
+### 15. Conditional logic
+
+### 16. Break for 10 minutes
+
+### 17. Introduction to Coding (16 minutes)
+
+### 18. Install Visual Studio Code
+
+### 19. Visual Studio Code overview
+
+### 20. Hello world program
+
+### 21. Addition program
+
+### 22. Conditional statements
+
+### 23. Age categorization program
+
+### 24. Questions
+
+### 25. Closing notes
 
 
 ## Installing Tools Setup
