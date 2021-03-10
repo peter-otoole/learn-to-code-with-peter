@@ -119,31 +119,151 @@ _Note: We expect the last line to fail with an error stating "hello is not defin
 
 ### 8. Basic operators with numbers
 
+In most programming languages, the mathematical operators for addition, subtraction, multiplication, and division work *almost as you would expect. 
 
+We can test using the NodeJs REPL. Try entering some basic mathematical expressions.
+
+```Javascript
+> 1 + 2
+> 3 - 2
+> 1 - 3
+> 3 * 5
+> 20 / 4
+```
+
+Mathematical operators can also be used in other situations. For example, the addition operator can be used to attach two words together. _Note: we need to include a space so the words don't get smashed together._
+
+```Javascript
+> 'hello' + ' ' + 'world'
+```
+
+A lesser well known operator is the modulo (a.k.a. mod) operator. In programming, this is represented by the percentage symbol. This operator gives the remainder after one number is divided by another. For example, if you divide 17 by 5, 3 is the number of times 5 first evenly into 17, 2 is the remainder left over after 3 * 5 is removed from 17. 
+
+
+```Javascript
+> 17 % 5
+```
 
 ### 9. Logical evaluation
 
+In this context, logical evaluation means to take an expression and evaluate it to either `true` or `false`. A subset of this logic is known as Boolean logic. Boolean logic is the subset where expressions consisting of `true` and `false` can be evaluated to give a final, single value of either `true` or `false`.
+
+In JavaScript, all values can be evaluated to either `true` or `false`. From here, Boolean operations can be performed to get the final, single value.
+
+The most common logical operators are:
+
+- The and operator, this is represented by `&&` and it returns true if the two inputs are two e.g. `true && true => true`
+- The or operator, this is represented by `||` and it returns true if either input is true e.g. `true || false => true`
+- The not operator, this is represented by `!` and it returns the opposite of the input e.g. `!true => false`
+- The comparison operator, this is represented by `==` and it returns true if the two inputs are the same e.g. `1 == 1 => true`
+  - Note, in JavaScript, we will use `===` instead of `==`. The reasoning will be clearing as you learn more about the language
+- The "not" comparison operator, this is represented by `!=` and it returns true if the two input values are not the same  e.g. `1 != 1 => false`
+  - Note, in JavaScript, we will use `!==` instead of `!=`. The reasoning will be clearing as you learn more about the language
+- The greater than operator, this is represented by `>` and it returns true if the first value is larger than the second e.g. `2 > 1 => true` 
+- The greater than or equal operator, this is represented by `>=` and it returns true if the first value is larger than or the same as the second e.g. `2 >= 2 => true` 
+- The less than operator, this is represented by `<` and it returns true if the first value is smaller than the second e.g. `1 < 2 => true` 
+- The less than or equal operator, this is represented by `<=` and it returns true if the first value is less than or the same as the second e.g. `1 <= 1 => true` 
+
 ### 10. Introduction to strings
+
+A string is a representation of an arbitrary list of characters. There is no limitation for what can be stored in a string. Strings are denoted with quotes. In JavaScript, either single or double quotes can be used. For example `'hello world'` and `"hello world"` are both valid strings.
 
 ### 11. String operators
 
-### 12. Introduction to variables
+Operators can be performed on more than just numbers and Boolean values. As we saw above, the plus operator (`+`) can be used to merge two strings into a single string.
 
-### 13. Data types
+```JavaScript
+'hello' + ' ' + 'world' => 'hello world'
+```
+
+The comparison operator (`===`) and "not" comparison operator (`!==`) can also be used on strings.
+
+```JavaScript
+'hello' === 'world' => false
+'hello' !== 'world' => true
+```
+
+### 12. Data types
+
+As we have seen already, there are several data types. Each programming language has a different list of data types and how they are handled. The following data types are available in most languages:
+
+- Number: used to represent all real numbers
+- String: used to represent an a list of arbitrary characters
+- Boolean: used to represent either a true or false value
+- Array: used to represent a list of any data types
+- Object: used to represent a container of any data type where each value has a unique name or key
+
+In JavaScript, the `typeof` operator can be used to check the data type of a value.
+
+```JavaScript
+typeof 1 => number
+typeof true => boolean
+typeof 'hello' => string
+typeof {} => object
+typeof [] => object
+```
+
+_Note: in JavaScript, the `typeof` operator will return 'object' for both objects and arrays. This is because arrays are a subset of object. Instead, there is another way of checking if a value is an array: `Array.isArray([]) => true`_
+
+### 13. Introduction to variables
+
+One of the (~4) core pillars of programming is variables. The concept of variables is not specific to programming; for example, in mathematics, you will have expressions such as `"3x + 10 = 19"` and be asked to solve for `x`. This usage of variables is very similar to programming as you will see later.
+
+In the context of programming, a variable is a labelled container to store a value. To create a variable, you declare it using a keyword (or syntax) and give it a label. A variable cannot be created without a label. In JavaScript, variables are declared using one of the keywords `let`, `const`, or `var`. For now, we will focus on `let`. In most languages, a variable label must start with a letter and can only contain letters and numbers. Their typically no other limitations so the following are all valid labels: `x`, `y`, `x123`, `firstName`, `james`, `James1`. 
+
+Once a variable is declared, values can be placed inside the variable using the assignment operator which is represented with the equals symbol (`=`). This is not to be confused with the comparison operator (`==`). The value stored within a variable (the container) can be changed an unlimited number of times. 
+
+The value stored within a variable (the container) can be referenced using the variable label. The value can be referenced/used simply by providing the label. 
+
+Putting all this together:
+
+```JavaScript
+let x
+
+x = 3
+x + 2 => 5
+
+x = 27
+x + 15 => 42
+
+x => 27
+```
 
 ### 14. Parsing strings to numbers
 
-### 15. Conditional logic
+When a number is stored within a string, the computer does not know the value is a number so if you try to add two numbers together but the numbers are within strings, the computer will simply smash them together (known as concatenation) rather than summing the numerical values. 
 
-### 16. Break for 10 minutes
+```JavaScript
+'22' + '11' => '2211'
+```
 
-### 17. Introduction to Coding (16 minutes)
+When we want to generate the mathematical sum of the two numbers (i.e. `33` rather than `"2211"`), we must first tell the computer that these values are actually numbers. We do this by parsing the string as a number. In JavaScript, we use a built in function called `parseInt()`:
+
+```JavaScript
+parseInt('22') + parseInt('11') => 33
+```
+
+### 15. Break for 10 minutes
+
+You have done very well so far, take a break.
+
+### 16. Introduction to Coding (16 minutes)
+
+Watch this YouTube video on "Introduction to Coding" - [https://www.youtube.com/watch?v=5HaJPpihkBI&t](https://www.youtube.com/watch?v=5HaJPpihkBI&t)
 
 ### 18. Install Visual Studio Code
 
+- Go to the Visual Studio Code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+- Download the installer for your OS type
+- Run the downloaded installer making sure to select the two options for _"Add "Open with Code"..."_ on the "Select Additional Tasks" screen
+
 ### 19. Visual Studio Code overview
 
+Visual Studio Code or VSCode is a hybrid between a text editor and a IDE (Integrated Development Environment). The tool has most of the features of a typical IDE with providing the lightweight benefits of a text editor. Look over the user interface to understand some of the basic features.
+
 ### 20. Hello world program
+
+
 
 ### 21. Addition program
 
@@ -163,7 +283,3 @@ _Note: We expect the last line to fail with an error stating "hello is not defin
 https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
 https://github.com/microsoft/terminal/releases
 add-appxpackage ...
-
-### Install Visual Studio Code
-
-https://code.visualstudio.com/download
