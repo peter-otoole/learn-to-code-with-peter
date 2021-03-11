@@ -32,10 +32,11 @@
 
 ### 1. Install Windows Terminal
 
-Windows Terminal is a new, convient, and powerful tool giving you access to system and third-party tools. Terminal uses Command Prompt and Powershell under the hood to execute commands. 
+Windows Terminal is a new, convenient, and powerful tool giving you access to system and third-party tools. Terminal uses Command Prompt and Powershell under the hood to execute commands. 
 
 - Open the `Microsoft Store`
 - Search for `Windows Terminal`
+  - This link can be used to quickly find [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) in the store
 - Click Get/Install
 
 ### 2. Execute basic commands
@@ -71,7 +72,7 @@ Windows Terminal is a new, convient, and powerful tool giving you access to syst
 
 ### 4. Install GitHub CLI
 
-- Go to the GitHub CLI website [https://cli.github.com/](https://cli.github.com/)
+- Go to the [GitHub CLI website](https://cli.github.com/)
 - Click download
   - If the download button doesn't appear, [use this direct link](https://github.com/cli/cli/releases/download/v1.7.0/gh_1.7.0_windows_amd64.msi)
 - Install the CLI by running the executable
@@ -95,7 +96,7 @@ Windows Terminal is a new, convient, and powerful tool giving you access to syst
 
 ### 6. Install NodeJs
 
-- Go to the NodeJs website [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+- Go to the [NodeJs website](https://nodejs.org/en/download/)
 - Download the LTS version for your OS type
 - Run the downloaded installer choosing default options
 - Close and reopen Windows Terminal
@@ -249,11 +250,11 @@ You have done very well so far, take a break.
 
 ### 16. Introduction to Coding (16 minutes)
 
-Watch this YouTube video on "Introduction to Coding" - [https://www.youtube.com/watch?v=5HaJPpihkBI&t](https://www.youtube.com/watch?v=5HaJPpihkBI&t)
+Watch this YouTube video on [Introduction to Coding](https://www.youtube.com/watch?v=5HaJPpihkBI&t).
 
 ### 18. Install Visual Studio Code
 
-- Go to the Visual Studio Code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+- Go to the Visual [Studio Code website](https://code.visualstudio.com/download)
 - Download the installer for your OS type
 - Run the downloaded installer making sure to select the two options for _"Add "Open with Code"..."_ on the "Select Additional Tasks" screen
 
@@ -263,23 +264,72 @@ Visual Studio Code or VSCode is a hybrid between a text editor and a IDE (Integr
 
 ### 20. Hello world program
 
+We are now going to create our first JavaScript/NodeJs program. It's easy thank you may think. 
 
+As we say early in this lesson, use Windows Terminal to execute a program and we can pass that program a parameter such as `ping google.com`; in this example, `ping` is the program and `google.com` is the parameter. We also saw for NodeJs, to launch the REPL, we simply call the program without any parameters. The node program does accept parameters, however. We can run and tell it the name of a script to execute so if we had a script file called `hello.js`, we tell node to execute this script by running the command `node hello.js`.
+
+The second recall here is that the P in REPL stands for print so, when we run our own scripts, the outputs are not automatically printed. Instead we have to rely on a build in function which is called `console.log()`. As the name implies, this prints (or logs) a message to the console (the terminal). 
+
+Inside the `./lessons/lesson-1/` folder, create a new file called `hello.js`. Inside this file, enter the following content and save the file.
+
+```JavaScript
+let message = "hello world"
+console.log(message)
+```
+
+In the terminal, navigate to the same folder `./lessons/lesson-1/` and execute the command `node hello.js`.
 
 ### 21. Addition program
 
+We will now write a program to add two numbers. These numbers will be passed to the script when the script is called. Like we saw in the previous program, values can be passed to programs (for `node hello.js`, hello.js is passed to node). We can build on this and pass values to a script simply by chaining the values in the command. The values can then be accessed within the script using `process.argv`. Note: `process.argv` is an array where the first two values are the name of the program executing the script and the name of the script. The third and successive values are the arguments passed to the script. So, if the command `node script.js x y`, the `x` and `y` arguments can be accessed using `process.argv[2]` and `process.argv[3]` respectively.
+
+Using the knowledge gained so far, write a program which takes two input numbers and outputs the sum of those values i.e. when the command below is executed, the output matches below.
+
+```
+> node addition.js 2 7
+The sum of 2 and 7 is 9
+```
+
+_Hint: use the file "./skeleton/addition.js" as your starting point. Here, the challenge of reading input arguments is somewhat taken care of for you._
+
 ### 22. Conditional statements
+
+The conditional (decision) statement is the second (~4) core programming concepts. These statements are a way to tell the computer to do a task if a condition is met. The statement is referenced using the `if` keyword. Conditional statements are written differently in each programming language but generally speaking, there will always be the `if` keyword, a condition to evaluate, and a task to execute if the condition is true.
+
+In JavaScript (and all C-family languages), the condition to evaluate is given in parentheses `( ...condition... )` and the task to execute is given in braces `{ ...task... }`.
+
+
 
 ### 23. Age categorization program
 
+Using what we have learnt about writing scripts so far and the above conditional statements, write a program which gives you a classification based on your age. The output should look something like this: 
+
+```PowerShell
+> node age.js 15
+You are very young
+
+> node age.js 22
+You are a budding adult
+
+> node age.js 35
+You are an adult. Well done, you now have scary responsibilities and people expect things of you
+
+> node age.js 70
+You are probably senile
+```
+
 ### 24. Questions
 
-### 25. Closing notes
+Ageist jokes aside, hope you enjoyed this lesson. You have done great to get this far. Do you have any questions?
 
+## Supplementary Information
 
-## Installing Tools Setup
+### Installing Windows Terminal
 
-### Install Windows Terminal
+If you do not have Microsoft Store on your computer, you can still install Windows Terminal using these steps: 
 
-https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
-https://github.com/microsoft/terminal/releases
-add-appxpackage ...
+- Go to the Windows Terminal [GitHub releases page](https://github.com/microsoft/terminal/releases)
+- Scroll down to the `Assets` section under Windows Terminal (Note: not Windows Terminal Preview)
+- Download the `.msixbundle` file by clicking on it
+- Windows may recognize this file type and allow you to double-click it to install
+- If not, you can use the PowerShell command `add-appxpackage <filename>`
