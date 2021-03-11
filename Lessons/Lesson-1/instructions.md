@@ -296,9 +296,39 @@ _Hint: use the file "./skeleton/addition.js" as your starting point. Here, the c
 
 The conditional (decision) statement is the second (~4) core programming concepts. These statements are a way to tell the computer to do a task if a condition is met. The statement is referenced using the `if` keyword. Conditional statements are written differently in each programming language but generally speaking, there will always be the `if` keyword, a condition to evaluate, and a task to execute if the condition is true.
 
-In JavaScript (and all C-family languages), the condition to evaluate is given in parentheses `( ...condition... )` and the task to execute is given in braces `{ ...task... }`.
+In JavaScript (and all C-family languages), the condition to evaluate is given in parentheses `( ...condition... )` and the task to execute is given in braces `{ ...task... }`. For example:
+
+```JavaScript
+if ( x === 2 ) {
+    console.log( "The value of x is 2" )
+}
+```
+
+If we want to do one task if the condition is two and a different task if it's false, you can chain the `else` keyword after the first task i.e. 
+
+```JavaScript
+if ( x === 2 ) {
+    console.log( "The value of x is 2" )
+}
+else {
+    console.log( "The value of x is NOT 2" )
+}
+```
+
+We can also chain `if` statements by using `else if`. This will allow us to do any number of actions based on multiple conditions. We can still use just `else` at the end to do the final action if non of the prior conditions are true.
 
 
+```JavaScript
+if ( x < 0 ) {
+    console.log( "The value of x is a negative number" )
+}
+else if ( x === 0 ) {
+    console.log( "The value of x is 0" )
+}
+else {
+    console.log( "The value of x is a positive number" )
+}
+```
 
 ### 23. Age categorization program
 
