@@ -32,7 +32,7 @@
 
 ### 1. Install Windows Terminal
 
-Windows Terminal is a new, convenient, and powerful tool giving you access to system and third-party tools. Terminal uses Command Prompt and Powershell under the hood to execute commands. 
+Windows Terminal is a new, convenient, and powerful tool giving you access to system and third-party tools. Terminal uses Command Prompt and Powershell under the hood to execute commands.
 
 - Open the `Microsoft Store`
 - Search for `Windows Terminal`
@@ -50,7 +50,7 @@ Windows Terminal is a new, convenient, and powerful tool giving you access to sy
 
   `ping google.com`
 
-- Use _ipconfig_ command to check local IP address 
+- Use _ipconfig_ command to check local IP address
 
   `ipconfig`
 
@@ -104,8 +104,8 @@ Windows Terminal is a new, convenient, and powerful tool giving you access to sy
 
 ### 7. Introduction to NodeJs REPL
 
->REPL also known as Read Evaluate Print Loop is a programming language environment(Basically a console window) that takes single expression as user input and returns the result back to the console after execution.
-~[NodeJS docs](https://nodejs.dev/learn/how-to-use-the-nodejs-repl)
+> REPL also known as Read Evaluate Print Loop is a programming language environment(Basically a console window) that takes single expression as user input and returns the result back to the console after execution.
+> ~[NodeJS docs](https://nodejs.dev/learn/how-to-use-the-nodejs-repl)
 
 We will use the REPL to execute some basic commands and operations. As mentioned above, each line entered will be _"run"_ almost as if it were an individual program. The output of each line entered will be printed to the console. Test this out by entering some numbers and words.
 
@@ -120,7 +120,7 @@ _Note: We expect the last line to fail with an error stating "hello is not defin
 
 ### 8. Basic operators with numbers
 
-In most programming languages, the mathematical operators for addition, subtraction, multiplication, and division work *almost as you would expect. 
+In most programming languages, the mathematical operators for addition, subtraction, multiplication, and division work \*almost as you would expect.
 
 We can test using the NodeJs REPL. Try entering some basic mathematical expressions.
 
@@ -138,8 +138,7 @@ Mathematical operators can also be used in other situations. For example, the ad
 > 'hello' + ' ' + 'world'
 ```
 
-A lesser well known operator is the modulo (a.k.a. mod) operator. In programming, this is represented by the percentage symbol. This operator gives the remainder after one number is divided by another. For example, if you divide 17 by 5, 3 is the number of times 5 first evenly into 17, 2 is the remainder left over after 3 * 5 is removed from 17. 
-
+A lesser well known operator is the modulo (a.k.a. mod) operator. In programming, this is represented by the percentage symbol. This operator gives the remainder after one number is divided by another. For example, if you divide 17 by 5, 3 is the number of times 5 first evenly into 17, 2 is the remainder left over after 3 \* 5 is removed from 17.
 
 ```Javascript
 > 17 % 5
@@ -158,12 +157,12 @@ The most common logical operators are:
 - The not operator, this is represented by `!` and it returns the opposite of the input e.g. `!true => false`
 - The comparison operator, this is represented by `==` and it returns true if the two inputs are the same e.g. `1 == 1 => true`
   - Note, in JavaScript, we will use `===` instead of `==`. The reasoning will be clearing as you learn more about the language
-- The "not" comparison operator, this is represented by `!=` and it returns true if the two input values are not the same  e.g. `1 != 1 => false`
+- The "not" comparison operator, this is represented by `!=` and it returns true if the two input values are not the same e.g. `1 != 1 => false`
   - Note, in JavaScript, we will use `!==` instead of `!=`. The reasoning will be clearing as you learn more about the language
-- The greater than operator, this is represented by `>` and it returns true if the first value is larger than the second e.g. `2 > 1 => true` 
-- The greater than or equal operator, this is represented by `>=` and it returns true if the first value is larger than or the same as the second e.g. `2 >= 2 => true` 
-- The less than operator, this is represented by `<` and it returns true if the first value is smaller than the second e.g. `1 < 2 => true` 
-- The less than or equal operator, this is represented by `<=` and it returns true if the first value is less than or the same as the second e.g. `1 <= 1 => true` 
+- The greater than operator, this is represented by `>` and it returns true if the first value is larger than the second e.g. `2 > 1 => true`
+- The greater than or equal operator, this is represented by `>=` and it returns true if the first value is larger than or the same as the second e.g. `2 >= 2 => true`
+- The less than operator, this is represented by `<` and it returns true if the first value is smaller than the second e.g. `1 < 2 => true`
+- The less than or equal operator, this is represented by `<=` and it returns true if the first value is less than or the same as the second e.g. `1 <= 1 => true`
 
 ### 10. Introduction to strings
 
@@ -210,11 +209,11 @@ _Note: in JavaScript, the `typeof` operator will return 'object' for both object
 
 One of the (~4) core pillars of programming is variables. The concept of variables is not specific to programming; for example, in mathematics, you will have expressions such as `"3x + 10 = 19"` and be asked to solve for `x`. This usage of variables is very similar to programming as you will see later.
 
-In the context of programming, a variable is a labelled container to store a value. To create a variable, you declare it using a keyword (or syntax) and give it a label. A variable cannot be created without a label. In JavaScript, variables are declared using one of the keywords `let`, `const`, or `var`. For now, we will focus on `let`. In most languages, a variable label must start with a letter and can only contain letters and numbers. Their typically no other limitations so the following are all valid labels: `x`, `y`, `x123`, `firstName`, `james`, `James1`. 
+In the context of programming, a variable is a labelled container to store a value. To create a variable, you declare it using a keyword (or syntax) and give it a label. A variable cannot be created without a label. In JavaScript, variables are declared using one of the keywords `let`, `const`, or `var`. For now, we will focus on `let`. In most languages, a variable label must start with a letter and can only contain letters and numbers. Their typically no other limitations so the following are all valid labels: `x`, `y`, `x123`, `firstName`, `james`, `James1`.
 
-Once a variable is declared, values can be placed inside the variable using the assignment operator which is represented with the equals symbol (`=`). This is not to be confused with the comparison operator (`==`). The value stored within a variable (the container) can be changed an unlimited number of times. 
+Once a variable is declared, values can be placed inside the variable using the assignment operator which is represented with the equals symbol (`=`). This is not to be confused with the comparison operator (`==`). The value stored within a variable (the container) can be changed an unlimited number of times.
 
-The value stored within a variable (the container) can be referenced using the variable label. The value can be referenced/used simply by providing the label. 
+The value stored within a variable (the container) can be referenced using the variable label. The value can be referenced/used simply by providing the label.
 
 Putting all this together:
 
@@ -232,7 +231,7 @@ x => 27
 
 ### 14. Parsing strings to numbers
 
-When a number is stored within a string, the computer does not know the value is a number so if you try to add two numbers together but the numbers are within strings, the computer will simply smash them together (known as concatenation) rather than summing the numerical values. 
+When a number is stored within a string, the computer does not know the value is a number so if you try to add two numbers together but the numbers are within strings, the computer will simply smash them together (known as concatenation) rather than summing the numerical values.
 
 ```JavaScript
 '22' + '11' => '2211'
@@ -264,11 +263,11 @@ Visual Studio Code or VSCode is a hybrid between a text editor and a IDE (Integr
 
 ### 20. Hello world program
 
-We are now going to create our first JavaScript/NodeJs program. It's easy thank you may think. 
+We are now going to create our first JavaScript/NodeJs program. It's easy thank you may think.
 
 As we say early in this lesson, use Windows Terminal to execute a program and we can pass that program a parameter such as `ping google.com`; in this example, `ping` is the program and `google.com` is the parameter. We also saw for NodeJs, to launch the REPL, we simply call the program without any parameters. The node program does accept parameters, however. We can run and tell it the name of a script to execute so if we had a script file called `hello.js`, we tell node to execute this script by running the command `node hello.js`.
 
-The second recall here is that the P in REPL stands for print so, when we run our own scripts, the outputs are not automatically printed. Instead we have to rely on a build in function which is called `console.log()`. As the name implies, this prints (or logs) a message to the console (the terminal). 
+The second recall here is that the P in REPL stands for print so, when we run our own scripts, the outputs are not automatically printed. Instead we have to rely on a build in function which is called `console.log()`. As the name implies, this prints (or logs) a message to the console (the terminal).
 
 Inside the `./lessons/lesson-1/` folder, create a new file called `hello.js`. Inside this file, enter the following content and save the file.
 
@@ -304,7 +303,7 @@ if ( x === 2 ) {
 }
 ```
 
-If we want to do one task if the condition is two and a different task if it's false, you can chain the `else` keyword after the first task i.e. 
+If we want to do one task if the condition is two and a different task if it's false, you can chain the `else` keyword after the first task i.e.
 
 ```JavaScript
 if ( x === 2 ) {
@@ -316,7 +315,6 @@ else {
 ```
 
 We can also chain `if` statements by using `else if`. This will allow us to do any number of actions based on multiple conditions. We can still use just `else` at the end to do the final action if non of the prior conditions are true.
-
 
 ```JavaScript
 if ( x < 0 ) {
@@ -332,7 +330,7 @@ else {
 
 ### 23. Age categorization program
 
-Using what we have learnt about writing scripts so far and the above conditional statements, write a program which gives you a classification based on your age. The output should look something like this: 
+Using what we have learnt about writing scripts so far and the above conditional statements, write a program which gives you a classification based on your age. The output should look something like this:
 
 ```PowerShell
 > node age.js 15
@@ -356,7 +354,7 @@ Ageist jokes aside, hope you enjoyed this lesson. You have done great to get thi
 
 ### Installing Windows Terminal
 
-If you do not have Microsoft Store on your computer, you can still install Windows Terminal using these steps: 
+If you do not have Microsoft Store on your computer, you can still install Windows Terminal using these steps:
 
 - Go to the Windows Terminal [GitHub releases page](https://github.com/microsoft/terminal/releases)
 - Scroll down to the `Assets` section under Windows Terminal (Note: not Windows Terminal Preview)
