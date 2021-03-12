@@ -2,6 +2,8 @@
 
 ## Lesson Overview
 
+This lesson focuses on getting setup for programming and an introduction to the first two programming concepts: variables and conditional statements.
+
 1. Install Windows Terminal
 2. Execute basic commands
 3. Set up workspace folder
